@@ -23,7 +23,7 @@
         <div class="modal-content">
      <div class="modal-header">
      <h5 class="modal-title">Add Task</h5>
-     <button class="close" type="button" data-dismiss="modal">/\</button>
+     <button class="close" type="button" data-dismiss="modal">Close</button>
    </div>
    <div class="modal-body">
        <form method="Post" onsubmit="return taskObj.AddTask(this);" id="form-task-hour-calculator">
@@ -50,9 +50,31 @@
    <div class="modal-footer">
        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
        <button type="button" form="form-task-hour-calculator" class="btn btn-primary">Add Task</button>
+      
     </div>
 </div>
 </div>
+</div>
+ <!-- show all tasks-->
+ <table class="table">
+    <caption class="text-center">All Tasks</caption>
+    <tr>
+        <th>Task</th>
+        <th>Project</th>
+        <th>Duration</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Action</th>
+
+    </tr>
+    <tbody id="all-tasks"></tbody>
+</table>
+<!--delete Project-->
+<div class="del">
+<form method="Post" onsubmit="return taskObj.deleteProject(this);"style="display:content;">
+<select name="project" class="form-control" id="form-task-hour-calculator-all-projects"></select>
+<input type="submit" class="btn btn-danger" value="Delete Project">
+</form>
 </div>
 
 
